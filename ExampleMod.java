@@ -91,14 +91,7 @@ public class ExampleMod
         			'B', Items.BLAZE_ROD,
         			'E', Items.ENDER_EYE
         	});
-        	GameRegistry.addShapedRecipe(optionalGroup,  optionalGroup, new ItemStack(Items.ENDER_EYE), new Object[] {
-        			"GZG",
-        			"ZGZ",
-        			"ZGZ",
-        			'Z', Items.ROTTEN_FLESH,
-        			'G', Blocks.GLOWSTONE
-        	});
-        	GameRegistry.addShapedRecipe(optionalGroup,  optionalGroup, new ItemStack(Blocks.SANDSTONE), new Object[] {
+        	GameRegistry.addShapedRecipe(optionalGroup,  optionalGroup, new ItemStack(Blocks.SANDSTONE, 8), new Object[] {
         			"WWW",
         			"WCW",
         			"WWW",
@@ -175,14 +168,15 @@ public class ExampleMod
         	final float SANDSTONE_SMELT_XP = 0.3F;
         	
         	GameRegistry.addSmelting(Items.WATER_BUCKET, new ItemStack(Items.LAVA_BUCKET), LAVA_BUCKET_SMELT_XP);
-        	GameRegistry.addSmelting(Items.BLAZE_ROD, new ItemStack(Items.WOODEN_SWORD), BLAZE_ROD_SMELT_WOOD_XP);
-        	GameRegistry.addSmelting(Items.BLAZE_ROD, new ItemStack(Items.STONE_SWORD), BLAZE_ROD_SMELT_STONE_XP);
-        	GameRegistry.addSmelting(Items.BLAZE_ROD, new ItemStack(Items.IRON_SWORD), BLAZE_ROD_SMELT_IRON_XP);
-        	GameRegistry.addSmelting(Items.BLAZE_ROD, new ItemStack(Items.GOLDEN_SWORD), BLAZE_ROD_SMELT_GOLD_XP);
-        	GameRegistry.addSmelting(Items.BLAZE_ROD, new ItemStack(Items.DIAMOND_SWORD), BLAZE_ROD_SMELT_DIAMOND_XP);
+        	GameRegistry.addSmelting(Items.WOODEN_SWORD, new ItemStack(Items.BLAZE_ROD, 1), BLAZE_ROD_SMELT_WOOD_XP);
+        	GameRegistry.addSmelting(Items.STONE_SWORD, new ItemStack(Items.BLAZE_ROD, 1), BLAZE_ROD_SMELT_STONE_XP);
+        	GameRegistry.addSmelting(Items.IRON_SWORD, new ItemStack(Items.BLAZE_ROD, 2), BLAZE_ROD_SMELT_IRON_XP);
+        	GameRegistry.addSmelting(Items.GOLDEN_SWORD, new ItemStack(Items.BLAZE_ROD, 4), BLAZE_ROD_SMELT_GOLD_XP);
+        	GameRegistry.addSmelting(Items.DIAMOND_SWORD, new ItemStack(Items.BLAZE_ROD, 8), BLAZE_ROD_SMELT_DIAMOND_XP);
         	GameRegistry.addSmelting(Blocks.LEAVES, new ItemStack(Items.REEDS), SUGARCANE_SMELT_XP);
         	GameRegistry.addSmelting(Blocks.SANDSTONE, new ItemStack(Blocks.SAND, 8), SANDSTONE_SMELT_XP);
         	
     	}
     }
 }
+
